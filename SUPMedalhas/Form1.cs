@@ -99,18 +99,6 @@ namespace SUPMedalhas
             txtNick.Text = Properties.Settings.Default.Nick;
             myTAG.Text = Properties.Settings.Default.TAG;
             txtTAG.Text = Properties.Settings.Default.Patente;
-            string link = string.Format("http://www.habbo.com.br/habbo-imaging/avatarimage?user={0}&action=std&direction=2&head_direction=3&gesture=sml&size=l", txtNick.Text);
-            Uri link2 = new Uri("https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=gif&user=,SrGabriel");
-            WebClient img = new WebClient();
-            string dir = Directory.GetCurrentDirectory();
-            img.DownloadFileAsync(link2, "avatarimage.gif");
-            avatar.Image = Bitmap.FromFile("avatarimage.gif");
-            //var request = WebRequest.Create(link2);
-            //using (var response = request.GetResponse())
-            //using (var stream = response.GetResponseStream())
-            //{
-                //avatar.Image = Bitmap.FromStream(stream);
-            //}
         }
     }
 }
